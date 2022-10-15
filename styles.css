@@ -1,0 +1,160 @@
+body {
+  background-image: url("https://media.istockphoto.com/vectors/taco-seamless-pattern-traditional-mexican-food-background-corn-vector-id636845328?b=1&k=20&m=636845328&s=612x612&w=0&h=JVFjydJRHk5adIskI4wy0AC4RxA0JNvbDAoHDGbo2X4=");
+}
+
+.main-float {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box-background {
+  background-color: #ad4132;
+  border: solid black 5px;
+  border-radius: 5px;
+  width: 45vw;
+  height: 43vw;
+}
+
+.box-background-top,
+.box-background-bottom {
+  height: 42.5vh;
+}
+
+.box-background-bottom {
+  border: solid #eaca3e 2px;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand-name {
+  text-align: center;
+  text-shadow: 2px 2px black;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  font-size: 32px;
+}
+
+.menu-options {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: solid #c6db9f 1px;
+}
+
+.review-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-top-half {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.review-name {
+  font-size: 30px;
+}
+
+.food-item {
+  background-color: #afa842;
+  border: solid white 3px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1vw 1vh;
+}
+
+/* SCROLL BAR */
+.mostly-customized-scrollbar {
+  display: block;
+  width: 44em;
+  overflow: auto;
+  height: 150em;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 8px;
+  background-color: #f7b791;
+}
+
+.food-item-holder {
+  color: black;
+  border-top: solid #eaca3e 2px;
+  border-left: solid #eaca3e 2px;
+  border-bottom: solid black 3px;
+  border-right: solid black 3px;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #f7b791;
+  border-radius: 4px;
+}
+
+.food-item-image {
+  width: 15rem;
+  border-radius: 4px;
+}
+
+/* .food-item-flex-left {
+  border: solid black 3px;
+} */
+
+.food-item-flex-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 4px;
+}
+
+.food-item-name {
+  text-align: center;
+}
+
+/* .food-item-image */
+
+#TACOMENU {
+  font-size: 24px;
+}
+
+#BURRITOMENU {
+  font-size: 24px;
+}
+
+#SIDESMENU {
+  font-size: 24px;
+}
+
+#FOOD-ITEM-PARENT {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+/* FOOD ITEM  */
+.mainFoodFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.foodNamePriceFlex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.foodDescription {
+  text-align: center;
+}
