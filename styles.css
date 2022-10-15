@@ -158,3 +158,71 @@ body {
 .foodDescription {
   text-align: center;
 }
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* styles */
+}
+/* Smartphones (portrait) ---------- */
+@media screen and (max-width: 320px) {
+  /* styles */
+}
+/* Smartphones (landscape) ---------- */
+@media screen and (min-width: 321px) {
+  .main-float {
+    display: flex;
+    flex-direction: column;
+    width: 200vw;
+  }
+
+  .box-background {
+    width: 200vw;
+  }
+
+  .left-box {
+    width: 200vw;
+    height: 90vh;
+  }
+
+  .food-item-holder {
+    width: 30vw;
+  }
+
+  .food-item-image {
+    width: 15vw;
+  }
+}
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* styles */
+}
+/* Tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 768px) {
+  /* styles */
+}
+/* Tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px) {
+  /* styles */
+}
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px) {
+  .box-background {
+    width: 45vw;
+  }
+
+  .left-box {
+    height: 90vh;
+  }
+
+  .food-item-holder {
+    width: 30vw;
+  }
+
+  .food-item-image {
+    width: 15vw;
+  }
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px) {
+  /* styles */
+}
