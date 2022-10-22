@@ -62,6 +62,34 @@ const Menu = [
   },
 ];
 
+const Users = [
+  {
+    id: 0,
+    Email: "FakeReviewEmail@fake.com",
+    Password: "FakePassword123.",
+    FirstName: "Alex",
+    LastName: "Ruppert",
+  },
+  {
+    id: 1,
+    Email: "RealReviewEmail@fake.com",
+    Password: "Rea;Password123.",
+    FirstName: "Turner",
+    LastName: "Tucker",
+  },
+  {
+    id: 2,
+    Email: "MaybeAFajeReviewEmail@fake.com",
+    Password: "123798.",
+    FirstName: "Rich",
+    LastName: "Tucker",
+  },
+];
+
+const Reviews = [
+  { id: 0, FoodReviewed: 0, Review: "Lorem Epsum Text", UserWhoReviewed: 2 },
+];
+
 const foodParentID = document.getElementById("FOOD-ITEM-PARENT");
 
 function removeItems() {
