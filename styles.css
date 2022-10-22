@@ -165,13 +165,115 @@ body {
 /* Smartphones (portrait and landscape) ---------- */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   /* styles */
+  .box-background-top,
+  .box-background-bottom {
+    height: 32.5vh;
+  }
+
+  .box-background-bottom {
+    margin-top: 100px;
+    /* height: 25vh; */
+  }
+
+  .box-background {
+    width: 45vw;
+    height: 43vw;
+  }
+
+  .right-box {
+    height: 87vh;
+  }
+
+  .food-item-image {
+    width: 15vw;
+    height: 15vh;
+    margin: auto;
+  }
+
+  #FOOD-ITEM-PARENT {
+    width: 45vw;
+    padding: 0 5vw;
+  }
+
+  #FOOD-ITEM-HOLDER {
+    width: 35vw;
+    margin-top: 5vh;
+  }
 }
 /* Smartphones (portrait) ---------- */
 @media screen and (max-width: 320px) {
   /* styles */
+  .box-background-top,
+  .box-background-bottom {
+    height: 32.5vh;
+  }
+
+  .box-background-bottom {
+    margin-top: 100px;
+    /* height: 25vh; */
+  }
+
+  .box-background {
+    width: 45vw;
+    height: 43vw;
+  }
+
+  .right-box {
+    height: 87vh;
+  }
+
+  .food-item-image {
+    width: 15vw;
+    height: 15vh;
+    margin: auto;
+  }
+
+  #FOOD-ITEM-PARENT {
+    width: 45vw;
+    padding: 0 5vw;
+  }
+
+  #FOOD-ITEM-HOLDER {
+    width: 35vw;
+    margin-top: 5vh;
+  }
 }
 /* Smartphones (landscape) ---------- */
 @media screen and (min-width: 321px) {
+  .box-background-top,
+  .box-background-bottom {
+    height: 32.5vh;
+  }
+
+  .box-background-bottom {
+    margin-top: 100px;
+    /* height: 25vh; */
+  }
+
+  .box-background {
+    width: 45vw;
+    height: 43vw;
+  }
+
+  .right-box {
+    height: 87vh;
+  }
+
+  .food-item-image {
+    width: 15vw;
+    height: 15vh;
+    margin: auto;
+  }
+
+  #FOOD-ITEM-PARENT {
+    width: 45vw;
+    padding: 0 5vw;
+  }
+
+  #FOOD-ITEM-HOLDER {
+    width: 35vw;
+    margin-top: 5vh;
+  }
 }
 
 /* Tablets, iPads (portrait) ---------- */
