@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Texan Tacos</title>
   </head>
   <body>
     <header>
@@ -22,24 +22,21 @@
           <div id="FOOD-ITEM-PARENT" class="mostly-customized-scrollbar"></div>
         </div>
         <div class="right-box">
-          <div class="box-background box-background-top">
-            <p>Will be img of reviewed item</p>
-            <!-- if no images/reviews show random food images -->
-            <!-- put aarows between pictures and reviews to change between -->
+          <div class="box-background box-background-top" id="ImageParent">
+            <img id="ImageReviewBox" src="" alt="food" />
+          </div>
+          <div class="arrow-div">
+            <div class="arrow-right"></div>
+            <div class="arrow-left"></div>
           </div>
           <div class="box-background box-background-bottom">
             <div class="review-flexbox">
               <div class="review-top-half">
-                <p class="review-name">John Hancock</p>
-                <p>stars here</p>
+                <p id="ReviewName" class="review-name"></p>
+                <!-- <p>stars here</p> -->
               </div>
               <div>
-                <p class="review-description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quisquam nobis corrupti quis veniam ratione quo vero nemo,
-                  consectetur itaque alias, quia fugiat facilis iure excepturi
-                  laudantium nulla temporibus esse modi!
-                </p>
+                <p id="ReviewComment" class="review-description"></p>
               </div>
             </div>
           </div>

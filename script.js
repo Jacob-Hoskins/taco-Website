@@ -39,6 +39,8 @@ const Menu = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non eius at qui magni sint facere molestias ad ratione voluptatem libero, voluptas explicabo omnis iusto laudantium laborum quaerat. Voluptas, libero.",
     Price: "$2.35",
     MenuCatagory: "Sides",
+    ImageLink:
+      "https://www.gannett-cdn.com/-mm-/43357c0c3c2f4747b98aa9fba150b940a7335403/c=0-106-2048-1262/local/-/media/Phoenix/Phoenix/2014/05/20//1400623725000-10259295-661244810635903-1147434344509800574-o.jpg",
   },
 
   {
@@ -48,6 +50,8 @@ const Menu = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non eius at qui magni sint facere molestias ad ratione voluptatem libero, voluptas explicabo omnis iusto laudantium laborum quaerat. Voluptas, libero.",
     Price: "$2.35",
     MenuCatagory: "Sides",
+    ImageLink:
+      "https://toast-local-nyc3-production.nyc3.cdn.digitaloceanspaces.com/restaurants/2ce98c22-2fda-46e8-9f81-2fa4cfd050cb/chips-salsa--guac-menuitem-12588281-610.webp",
   },
 
   {
@@ -87,17 +91,93 @@ const Users = [
 ];
 
 const Reviews = [
-  { id: 0, FoodReviewed: 0, Review: "Lorem Epsum Text", UserWhoReviewed: 2 },
+  {
+    id: 0,
+    FoodReviewed: 0,
+    ReviewComment: "Good burritos, they dont skimp out",
+    UserWhoReviewed: 2,
+    FoodType: "Burritos",
+    Stars: 5,
+  },
+  {
+    id: 1,
+    FoodReviewed: 1,
+    ReviewComment: "Good Tacos, I love the shells",
+    UserWhoReviewed: 0,
+    FoodType: "Tacos",
+    Stars: 4,
+  },
+  {
+    id: 2,
+    FoodReviewed: 2,
+    ReviewComment: "Just the perfect amount of spice",
+    UserWhoReviewed: 1,
+    FoodType: "Tacos",
+    Stars: 5,
+  },
+  {
+    id: 3,
+    FoodReviewed: 3,
+    ReviewComment: "I love Chips",
+    UserWhoReviewed: 1,
+    FoodType: "Sides",
+    Stars: 5,
+  },
 ];
 
 const foodParentID = document.getElementById("FOOD-ITEM-PARENT");
+
+const ReviewName = document.getElementById("ReviewName");
+const ReviewComment = document.getElementById("ReviewComment");
+const ImageParent = document.getElementById("ImageParent");
+const ImageBox = document.createElement("img");
+
+//FIXME: Picture doesnt update when different menu item clicked
+function updateReviewsHTML(food) {
+  let review_list = [];
+
+  ImageBox.setAttribute("id", "ImageReviewBox");
+
+  for (let x = 0; x != Reviews.length; x++) {
+    if (Reviews[x].FoodType === food) {
+      review_list.push(Reviews[x]);
+    }
+  }
+  let review = review_list[0].ReviewComment;
+  let nameID = review_list[0].UserWhoReviewed;
+  let usersName = Users[nameID].FirstName;
+  let imgLink = review_list[0].FoodReviewed;
+
+  ImageBox.setAttribute("src", Menu[imgLink].ImageLink);
+
+  ImageParent.appendChild(ImageBox);
+  ReviewComment.innerText = review;
+  ReviewName.innerText = usersName;
+}
+
+//TODO: insert images
+function findReviews(food) {
+  let foods = [];
+
+  //gets review users name
+  for (let x = 0; x != Reviews.length; x++) {
+    if (Reviews[x].FoodType === food) {
+      foods.push(Reviews[x]);
+    }
+  }
+}
+
+function resetReviews() {
+  let image = document.getElementById("ImageReviewBox");
+  image.remove();
+}
 
 function removeItems() {
   //number of child elements to remove
   const x = foodParentID.childElementCount;
 
   foodParentID.textContent = "";
-  console.log(x);
+  //console.log(x);
   while (foodParentID.lastChild) {
     foodParentID.lastChild.remove();
   }
@@ -141,17 +221,6 @@ function updateFoodItemHolder(foodName, foodPrice, foodDescription, img) {
   mainFoodFlex.appendChild(foodNameAndDescFlex);
   divParent.appendChild(mainFoodFlex);
 
-  // divParent.appendChild(foodImageElement);
-
-  // foodNameElement.innerText = foodName;
-  // divParent.appendChild(foodNameElement);
-
-  // foodPriceElement.innerText = foodPrice;
-  // divParent.appendChild(foodPriceElement);
-
-  // foodDescriptionElement.innerText = foodDescription;
-  // divParent.appendChild(foodDescriptionElement);
-
   //append final element to page
   foodParentID.appendChild(divParent);
 }
@@ -181,6 +250,7 @@ function clickedMenuItem(item) {
     }
   }
   addFoodMenuItem(item);
+  findReviews(item);
 }
 
 const taco = document.getElementById("TACOMENU");
@@ -191,6 +261,8 @@ taco.addEventListener("click", () => {
   taco.style.fontSize = "30px";
   removeItems();
   clickedMenuItem("Tacos");
+  resetReviews();
+  updateReviewsHTML("Tacos");
 });
 
 const burrito = document.getElementById("BURRITOMENU");
@@ -201,6 +273,8 @@ burrito.addEventListener("click", () => {
   burrito.style.fontSize = "30px";
   removeItems();
   clickedMenuItem("Burritos");
+  resetReviews();
+  updateReviewsHTML("Burritos");
 });
 
 const sides = document.getElementById("SIDESMENU");
@@ -211,4 +285,6 @@ sides.addEventListener("click", () => {
   sides.style.fontSize = "30px";
   removeItems();
   clickedMenuItem("Sides");
+  resetReviews();
+  updateReviewsHTML("Sides");
 });
