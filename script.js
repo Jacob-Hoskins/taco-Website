@@ -64,6 +64,28 @@ const Menu = [
     ImageLink:
       "https://thumbor.bigedition.com/best-taco-trucks/IuCuByvQXit1fDPGxbJa4DSplMo=/800x599/filters:quality(80)/granite-web-prod/31/69/31692ffd801c452a9b6cbc139d081277.jpeg",
   },
+
+  {
+    id: 6,
+    FoodName: "Beefy Burnin Burrito",
+    Description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non eius at qui magni sint facere molestias ad ratione voluptatem libero, voluptas explicabo omnis iusto laudantium laborum quaerat. Voluptas, libero.",
+    Price: "$6.35",
+    MenuCatagory: "Burritos",
+    ImageLink:
+      "http://dailywaffle.com/wp-content/uploads/2012/03/steak-fajita-burrito-at-pats-taqueria-hanalei.jpg",
+  },
+
+  {
+    id: 7,
+    FoodName: "Bean Beef & Guac Burrito",
+    Description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non eius at qui magni sint facere molestias ad ratione voluptatem libero, voluptas explicabo omnis iusto laudantium laborum quaerat. Voluptas, libero.",
+    Price: "$4.35",
+    MenuCatagory: "Burritos",
+    ImageLink:
+      "https://www.seriouseats.com/thmb/BNwDQbhgLgQUSS4nji1NhvdVPkM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__07__20200706-chorizo-egg-refried-bean-breakfast-burrito-daniel-gritzer-30-8c0e2a90d5d64399a58e1cf5e856922f.jpg",
+  },
 ];
 
 const Users = [

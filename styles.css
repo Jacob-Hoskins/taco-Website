@@ -2,6 +2,16 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: MyFont;
+  src: url("./travel-october/Travel\ October.ttf");
+}
+
+p {
+  font-family: MyFont;
+  font-size: 20px;
+}
+
 body {
   background-image: url("https://media.istockphoto.com/vectors/taco-seamless-pattern-traditional-mexican-food-background-corn-vector-id636845328?b=1&k=20&m=636845328&s=612x612&w=0&h=JVFjydJRHk5adIskI4wy0AC4RxA0JNvbDAoHDGbo2X4=");
 }
